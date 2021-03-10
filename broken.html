@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=2" />
+
+    <title>Broken!</title>
+
+    <style type="text/css">
+        @import "broken.css";
+    </style>
+    <style type="text/css">
+        body {
+            font-family: sans-serif;
+            padding: 2rem 3rem;
+        }
+        img + figcaption {
+            color: gray;
+            font-style: italic;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Broken!</h1>
+    <p>This html file imports <a href="broken.css">broken.css</a>, which consist of <strong>493 mostly blank lines</strong>, followed by a single selector:</p>
+    <code>
+        ::selection {}
+    </code>
+    <p>As a result, the Firefox CSS inspector is all blank.</p>
+    <figure>
+        <img src="broken.png" alt="Broken CSS inspector" />
+        <figcaption>The CSS inspector is all blank.</figcaption>
+    </figure>
+    <p>Compare to <a href="fine.html">fine.html</a>, which is identical except that the imported css file has <strong>492 blank lines</strong> instead!</p>
+</body>
+</html>
